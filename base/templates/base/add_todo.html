@@ -1,0 +1,15 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+<head>
+    <title>Add To-Do</title>
+</head>
+<body>
+    <h1>Add To-Do</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add</button>
+    </form>
+</body>
+{% endblock %}
